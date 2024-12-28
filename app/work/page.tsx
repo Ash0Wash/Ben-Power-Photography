@@ -5,7 +5,7 @@ const categories = [
   {
     title: 'Concerts',
     slug: 'concerts',
-    image: '/placeholder.svg?height=800&width=600',
+    image: '/images/concerts/b3-05.jpg',
   },
   {
     title: 'Portraits',
