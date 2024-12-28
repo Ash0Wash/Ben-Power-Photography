@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import StackGrid from "react-stack-grid";
+import Link from 'next/link'
 
 const photos = [
     { image: '/images/cars/15.jpg'},
@@ -27,7 +28,7 @@ const photos = [
     { image: '/images/cars/20.jpg'},
 ];
 
-export default function Cars() {
+export default function cars() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [imageSize, setImageSize] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
     const [isClient, setIsClient] = useState(false);
@@ -174,6 +175,9 @@ export default function Cars() {
                     </div>
                 </div>
             )} <p className="absolute mt-12 text-base font-thin pb-10 left-8">contact@benpowerphotography.com</p>
+            <Link href="/work/streetphotography">
+            <p className="absolute text-3xl right-40 pt-10">Street photography →</p>
+            </Link>
         </div>
     );
 }
