@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import StackGrid from "react-stack-grid";
+import Link from 'next/link'
 
 const photos = [
     { image: '/images/portraits/stb-2.jpg'},
@@ -39,7 +40,7 @@ const photos = [
     { image: '/images/portraits/-72.jpg'},
 ];
 
-export default function Cars() {
+export default function portraits() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [imageSize, setImageSize] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
     const [isClient, setIsClient] = useState(false);
@@ -98,7 +99,7 @@ export default function Cars() {
                                 <Image
                                     src={category.image}
                                     className="w-full h-full cursor-pointer object-contain"
-                                    alt="Car photos"
+                                    alt="Portrait photos"
                                     width={500}
                                     height={500}
                                     // priority={true}
@@ -186,6 +187,9 @@ export default function Cars() {
                     </div>
                 </div>
             )} <p className="absolute mt-12 text-base font-thin pb-10 left-8">contact@benpowerphotography.com</p>
+            <Link href="/work/cars">
+            <p className="absolute text-3xl pt-10 right-40">Cars →</p>
+        </Link>
         </div>
     );
 }
